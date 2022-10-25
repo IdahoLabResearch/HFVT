@@ -1,3 +1,5 @@
+# Copyright 2020, Battelle Energy Alliance, LLC
+
 import sys, os, getpass
 from matplotlib import pyplot as plt
 plt.style.use('ggplot')
