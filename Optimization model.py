@@ -1,10 +1,14 @@
 # Copyright 2020, Battelle Energy Alliance, LLC
 
-import sys, os, getpass
+import sys, os, getpass, platform
 from matplotlib import pyplot as plt
 plt.style.use('ggplot')
-if getpass.getuser() == 'LIB3':
+
+# CPLEX local path
+if platform.system() == 'Windows':
     sys.path.append(r'C:\Program Files\IBM\ILOG\CPLEX_Studio1210\cplex\python\3.7\x64_win64')
+elif platform.system() == 'Linux':
+    sys.path.append('/apps/local/cplex/CPLEX_Studio201/cplex/python/3.8/x86-64_linux/')
 
 import pandas
 import warnings
